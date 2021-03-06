@@ -1,5 +1,19 @@
 <html>
     <body>
         <h1>Hola desde una plantilla</h1>
+        <p>El nombre del usuario es: {{user_name}}</p>
+        <p>D&iacute;a: {{now_date.day}}</p>
+        <h3>Lista de frutas:</h3>
+        <p>{{list}} que se va recorrer</p>
+        <div>
+            {% for fruit in list %}
+                {% if fruit|length > 4 %}
+                    <p>Check: {{fruit}}</p>
+                {% else %}
+                    <p>{{fruit}}: no cumple las restrinciones</p>
+                {% endif %}
+               <p>{{fruit}}</p> 
+            {% endfor %}
+        </div>
     </body>
 </html>
